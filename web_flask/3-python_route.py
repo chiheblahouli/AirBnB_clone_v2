@@ -7,6 +7,7 @@ Flask web application
 from flask import Flask
 app = Flask(__name__)
 
+
 @app.route('/', strict_slashes=False)
 def hello():
     """Hello HBNB"""
@@ -17,7 +18,6 @@ def hello():
 def hbnb():
     """returns HBNB"""
     return 'HBNB'
-
 
 
 @app.route('/c/<text>', strict_slashes=False)
@@ -31,6 +31,7 @@ def Cisfun(text):
 def python(text='is cool'):
     """python is cool"""
     return 'Python ' + text.replace('_', ' ')
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000')
