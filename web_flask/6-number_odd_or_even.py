@@ -49,10 +49,12 @@ def Numofhtml(n):
 def numberoddoreven(n):
     """displays Pages only if n is an Integer"""
     if n % 2 == 0:
-        return render_template("6-number_odd_or_even.html",
-                               text="{} is even".format(n))
+        evenness = 'even'
     else:
-        return render_template("6-number_odd_or_even.html",
-                               text="{} is odd".format(n))
+        evenness = 'odd'
+    return render_template('6-number_odd_or_even.html', n=n,
+                           evenness=evenness)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000')
